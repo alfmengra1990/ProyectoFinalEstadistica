@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home - Brand</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css">
+    <style type="text/css">
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient">
+        <div class="container"><a class="navbar-brand logo" href="#">Proyecto de Estadística Inferencial</a><button
+                data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navbarNav"><span
+                    class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Integrantes.html">Acerca de Nosotros</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="page lanidng-page">
+        <section style="text-align: center;margin: 50px;">
+            <h1 style="text-align: center;font-size: 80px;">Proyecto Final Estadística Inferencial</h1>
+            <img style="width: 200px;height: 200px;" src="assets/img/432796.png">
+            <p>
+                <br>Analisis del&nbsp;Intervalo de confianza del 90% para la diferencia en la proporción de hombres
+                contra mujeres que poseen vehículo ademas de la&nbsp;estimación de la proporción de la diferencia entre
+                hombres y mujeres.<br>
+                <br>
+                <br>
+            </p>
+        </section>
+        <hr>
+        <section style="text-align: center;">
+            <h1 style="margin: 38px;font-size: 52px;">Diferencia de proporciones</h1>
+            <form method="post">
+                <div class="row">
+                    <div class="col">
+                        <label class="form-label">Total de hombres con vehículo</label>
+                        <input id="totalHombres" type="number" style="margin: 10px;" name="totalHombres"
+                            placeholder="Cantidad en números" min="0" step="1" oninput="validity.valid||(value='');">
+                    </div>
+                </div>
+            </form>
+            <div class="row">
+                <div class="col">
+                    <label class="form-label">Total de mujeres con vehículo&nbsp;</label>
+                    <input id="totalMujeres" type="number" style="margin: 10px;" name="totalMujeres"
+                        placeholder="Cantidad en números" min="0" step="1" oninput="validity.valid||(value='');">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label class="form-label">Total de datos consultados&nbsp;</label>
+                    <input id="totalAmbos" type="number" style="margin: 10px;" name="totalDatos"
+                        placeholder="Cantidad en números" min="0" step="1" oninput="validity.valid||(value='');">
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col">
+                </div>
+
+                <div class="col">
+                </div>
+
+                <div class="col">
+                    <button class="btn btn-primary" type="button" onclick="calcularDatos()"
+                        style="margin: 39px; width:200px;">Calcular diferencia</button>
+                </div>
+
+                <div class="col">
+                    <button class="btn btn-primary" type="button" onclick="limpiarDatos()" style="margin: 39px; width:200px;">Limpiar
+                        Datos</button>
+                </div>
+
+                <div class="col">
+                </div>
+
+                <div class="col">
+                </div>
+
+            </div>
+
+            <hr>
+
+            <div class="row">
+                <div class="col">
+                    <h1 style="margin: 28px;font-size: 52px;">Resultados</h1>
+
+                    <input id="inferior" type="number" style="margin: 10px;" readonly="" name="resultado1"
+                        placeholder="inferior">
+
+                    <label class="form-label" style="font-size: 32px;">&lt;p1-p2&lt;&nbsp;</label>
+
+                    <input id="superior" type="number" style="margin: 10px;" readonly="" name="resultado2"
+                        placeholder="superior">
+
+                </div>
+            </div>
+            <br>
+            <br>
+        </section>
+    </main>
+    <footer class="page-footer">
+        <div class="container">
+            <div class="links"><a href="#">Estadística Inferencial 2021</a></div>
+        </div>
+    </footer>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script type="text/javascript" src="assets/js/calcular.js"></script>
+</body>
+
+</html>
